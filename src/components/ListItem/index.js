@@ -1,6 +1,6 @@
 import './style.css';
 
-export const ListItem = props => {
+const ListItem = props => {
     const { item, onItemClick } = props;
     const { text, isComplete } = item;
 
@@ -12,3 +12,5 @@ export const ListItem = props => {
         </li>
     );
 }
+
+export default ListItem;

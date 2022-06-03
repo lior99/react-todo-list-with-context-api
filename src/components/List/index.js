@@ -2,7 +2,7 @@ import { useContext  } from 'react';
 import ListItem from '../ListItem';
 import { TodoItemsContext } from '../../context/TodoItemsContext';
 
-const List = props => {
+const List = () => {
     const { items, setTodoItems } = useContext(TodoItemsContext)
 
     const toggleComplete = item => {

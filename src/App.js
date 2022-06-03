@@ -1,4 +1,3 @@
-import { useState, createContext } from 'react';
 import List from './components/List';
 import { TodoItemsProvider } from './context/TodoItemsContext';
 

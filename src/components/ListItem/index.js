@@ -9,20 +9,14 @@ const ListItem = props => {
         isComplete ? 'complete' : '',
     ].join(' ')
 
-    const attrs = { checked: isComplete};
-
-    const onItemChange = () => {
-        console.log('you clicked on the checkbox');
-    }
+    const attrs = { checked: isComplete };
 
     return (
-        <li className="list-item" onClick={() => onItemClick(item)}>
-            <input type="checkbox" name="checkboxItem" onChange={() => null} { ...attrs } /> 
-            <label htmlFor="checkboxItem" className={className}>{ text }</label>
+        <li className="list-item">
+            <input type="checkbox" name="checkboxItem" onChange={() => onItemClick(item)} { ...attrs } /> 
+            <label htmlFor="checkboxItem" className={className} onClick={() => onItemClick(item)}>{ text }</label>
         </li>
     );
 }
 
 export default ListItem;
-
-// onChange={() => onItemClick(item)}/>
